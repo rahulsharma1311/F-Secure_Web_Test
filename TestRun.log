@@ -1,0 +1,13 @@
+
+## TC_1: started at: 2018-08-29 18:22:37.761686
+   TestSteps:
+     -- Browse F-Secure Home Page.
+     -- Navigate to Careers link.
+     -- Click on career link.
+     -- Career page opened successfully.
+     -- Navigate to job opening link.
+     -- Click on Job opening link.
+     -- JobOpenings page opened successfully.
+## TC_1 : passed. endtime: 2018-08-29 18:23:09.984281
+## TC_1 execution done.
+

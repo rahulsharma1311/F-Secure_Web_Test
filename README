@@ -1,0 +1,30 @@
+************* Windows OS: Keyword driven Test automation framework to test FSecure web portal. *****************
+
+Prequisits:
+
+1) Python3, Firefox 57 (and greater), Selenium 3.11 (and greater), Latest chrome.
+2) Selenium webdrivers.
+    Python -m pip install selenium
+3) Put latest webdriver binaries for Chrome and firefox in "./F-Secure_Job" folder. binaries: chromedriver.exe, geckodriver.exe.
+4) Also add "./F-Secure_Job" folder in PATH env-variable.
+   Control Panel\System and Security\System >> Advanced system settings >> environment variables >> system variables >> Path >> New
+
+
+Usage:
+
+1) Update TestCases.txt in "./F-Secure_Job" folder with TestCase_ID, desired "browser" and "keyword to search in job page"
+    Syntax:  <TC_ID>: <TestCase_to_run> <browser> <Keywords>
+    Example: TC_1: searchjob chrome Quality Engineer
+
+2) Add # at start of line to skip test case.
+    Example: # TC_1: searchjob chrome Quality Engineer
+
+3) Run Main.py from command line to start automation.
+    from CWD: "python Main.py"
+
+4) Redirect test results in log file. Refer below example. TestRun results will be stored in TestRun.log
+    from CWD: "python Main.py > TestRun.log"
+
+Note:
+
+1) Automation framework is interactive. Don't use PC (mouse, keyboard) when automation is running.
