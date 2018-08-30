@@ -1,5 +1,5 @@
 
-## TC_1: started at: 2018-08-29 18:22:37.761686
+## TC_2: started at: 2018-08-30 23:42:49.118794
    TestSteps:
      -- Browse F-Secure Home Page.
      -- Navigate to Careers link.
@@ -8,6 +8,35 @@
      -- Navigate to job opening link.
      -- Click on Job opening link.
      -- JobOpenings page opened successfully.
-## TC_1 : passed. endtime: 2018-08-29 18:23:09.984281
-## TC_1 execution done.
+     -- Job-Ad list box identified.
+         Total Jobs listed: 44
+         Total Job Pages: 8
+     -- Searching for specific job on list. keyword: software engineer
+
+          Matching Job: senior php software engineer
+          Page no.: 1
+
+          Matching Job: (senior) software engineer for advanced protection solutions (python + aws)
+          Page no.: 2
+
+          Matching Job: senior software engineer
+          Page no.: 3
+
+          Matching Job: junior software engineer for mac
+          Page no.: 3
+
+          Matching Job: frontend software engineer
+          Page no.: 4
+
+          Matching Job: software engineer (polyglot)
+          Page no.: 5
+
+          Matching Job: senior backend software engineer
+          Page no.: 5
+
+          Matching Job: (senior) software engineer for mac
+          Page no.: 7
+
+## TC_2 : TestCase Passed. endtime: 2018-08-30 23:44:13.855383
+## TC_2 execution done.
 

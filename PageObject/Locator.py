@@ -17,3 +17,4 @@ class Locator(object):
 # job_opening page locator.
     city_dropdown = '//*[@id="job-city"]'
     job_ad_list = '//*[@id="job-ads"]'
+    view_job_element = '//*[@id="job-ads"]/article['

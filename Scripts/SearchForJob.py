@@ -59,4 +59,27 @@ class SearchJob(object):
         jobAdListLink = JobOpeningObj.getJobAdListLink()
         assert jobAdListLink is not None, "JobOpening link not found in page."
         print("     -- Job-Ad list box identified.")
-        print("         Searching keywords in Job-Ad list box not implemented. In-progress")
+        ad_list_elements = JobOpeningObj.getJobListElements()
+        total_jobs = len(ad_list_elements)
+        total_pages = int(total_jobs/6) + 1
+        print("         Total Jobs listed: " + str(total_jobs))
+        print("         Total Job Pages: " + str(total_pages))
+        jobs_list = []
+        for i in range(total_jobs):
+            index = i+1
+            element_xpath = Locator.view_job_element + str(index) +"]/a"
+            element_handle = self.driver.find_element(By.XPATH, element_xpath)
+            job = element_handle.get_attribute('data-track-name')
+            job_name = job.split('-')
+            jobs_list.append([index, job_name[1].strip()])
+        print("     -- Searching for specific job on list. keyword: " + keyword, end='\n\n')
+        for job in jobs_list:
+            job_index = job[0]
+            job_string = job[1].lower()
+            if re.match(("^.*" + keyword + ".*"), job_string):
+                print("          Matching Job: " + job_string)
+                if job_index % 6 == 0:
+                    element_page_no = int(job_index/6)
+                else:
+                    element_page_no = int(job_index/6) + 1
+                print("          Page no.: " + str(element_page_no), end='\n\n')
